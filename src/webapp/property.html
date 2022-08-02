@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: green;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: green;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<h2 style="text-align:center">Select Property Type</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="img1.jpg" alt="Traditional" style="width:100%">
+      <div class="container">
+        <h2>Traditional</h2>
+        <p class="title">3-BHK & MODERN</p>
+        <p></p>
+        <p>With Modern Architecture Outside The City</p>
+        <p><button class="button">View Details</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="img2.jpg" alt="Basic" style="width:100%">
+      <div class="container">
+        <h2>Basic</h2>
+        <p class="title">2-BHK & BASIC</p>
+        <p></p>
+        <p>With Basic Architecture Near The City</p>
+        <p><button class="button">View Details</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="img3.jpg" alt="Villa" style="width:100%">
+      <div class="container">
+        <h2>Villa</h2>
+        <p class="title">PREMIUM VILLA</p>
+        <p></p>
+        <p>With Premium Architecture In The City</p>
+        <p><button class="button">View Details</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

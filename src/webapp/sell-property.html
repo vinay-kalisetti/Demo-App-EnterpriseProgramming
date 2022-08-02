@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+.about-section {
+  padding: 10px;
+  text-align: center;
+  background-color: grey;
+  color: white;
+}
+</style>
+
+<head>
+    <title> Sell Your Property </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" />
+</head>
+
+<body>
+<div class="about-section">
+  <H1>Select a Property to sell</H1>
+</div>
+<!-- content -->
+<center>
+    <select id="id_select2_example" style="width: 300px;">
+        <option data-img_src="img1.jpg">Normal House</option>
+        <option data-img_src="img3.jpg">Villa</option>
+        <option data-img_src="land.jpg">Farm land</option>
+    </select>
+</center>
+   
+<!-- /content -->
+<!-- scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
+<script type="text/javascript">
+    function custom_template(obj){
+            var data = $(obj.element).data();
+            var text = $(obj.element).text();
+            if(data && data['img_src']){
+                img_src = data['img_src'];
+                template = $("<div><img src=\"" + img_src + "\" style=\"width:100%;height:200px;\"/><p style=\"font-weight: 700;font-size:14pt;text-align:center;\">" + text + "</p></div>");
+                return template;
+            }
+        }
+    
+    var options = {
+        'templateSelection': custom_template,
+        'templateResult': custom_template,
+    }
+    $('#id_select2_example').select2(options);
+    $('.select2-container--default .select2-selection--single').css({'height': '270px'});
+
+</script>
+
+<center>
+	<br/>
+	<button onclick="location.href = 'home.html'" id="myButton">Check Details</button>
+	<script>
+	document.getElementById("myButton").onclick = function () {
+     location.href = "selling-details.html";
+	};
+     </script>
+</center>
+
+
+</body>
+</html>
